@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../css/font-awesome/css/font-awesome.min.css"
+    />
+    <title>Formstyling</title>
+  </head>
+  <body>
+    <div class="forms">
+      <div class="page">
+        <h1>Create an Account</h1>
+        <div class="container">
+          <div class="two_input">
+            <label for="first_name">First Name</label><br />
+            <input class="input" type="text" name="firstname" id="first_name" />
+          </div>
+          <div class="two_input">
+            <label for="last_name">Last Name</label><br />
+            <input class="input" type="text" name="lastname" id="last_name" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="one_input">
+            <label for="email">E-mail</label><br />
+            <input class="input" type="text" name="email" id="email" />
+          </div>
+        </div>
+        <p>We'll never share your email with anyone else.</p>
+        <div class="radio-container">
+          <div class="rad">
+            <input type="radio" name="gender" value="male" id="maleId" />
+            <label for="maleId">Male</label>
+          </div>
+          <div class="rad">
+            <input type="radio" name="gender" value="female" id="femaleId" />
+            <label for="femaleId">Female</label>
+          </div>
+        </div>
+        <div class="container">
+          <div class="select_country">
+            <label for="country">Country</label><br />
+            <select class="input select" name="country" id="country">
+              <option selected>Select</option>
+            </select>
+          </div>
+          <div class="two_input">
+            <label for="city">City</label><br />
+            <input class="input" type="text" name="city" id="city" />
+          </div>
+        </div>
+        <div class="container">
+          <button type="submit" class="btn">Sign Up</button>
+        </div>
+        <div class="info">
+          <p>
+            By clicking the 'Sign Up' button, you confirm that you accept our
+            <br /><span>Terms of Use</span> and <span>Privacy Policy.</span>
+          </p>
+        </div>
+        <div class="container">
+          <img src="assets/🔹 Color.png" />
+        </div>
+        <div class="log">
+          <div>Have an account?</div>
+          <div><span class="log_in">Log In</span></div>
+        </div>
+      </div>
+      <div class="page prof">
+        <h1>Profile</h1>
+        <div class="photo-container">
+          <div class="photo">
+            <img src="assets/📷 Image.png" alt="your photo" />
+          </div>
+          <div class="photo-icon">
+            <div class="upload">
+              <input class="input" type="text" name="load-photo" id="load-ph" />
+            </div>
+            <div class="info">
+              <p>Up to 1 MB (300x300 px)</p>
+            </div>
+          </div>
+          <div class="d-btn">
+            <button type="submit" class="del-btn">
+              <img src="assets/bin.svg" />
+            </button>
+          </div>
+        </div>
+        <div class="container">
+          <div class="two_input">
+            <label for="name">Name</label><br />
+            <input class="input" type="text" name="firstname" id="name" />
+          </div>
+          <div class="two_input">
+            <label for="mail">E-mail</label><br />
+            <input class="input" type="text" name="lastname" id="mail" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="select_country">
+            <label for="country">Country</label><br />
+            <select class="input select" name="country" id="country">
+              <option selected>Select</option>
+            </select>
+          </div>
+          <div class="two_input">
+            <label for="city">City</label><br />
+            <input class="input" type="text" name="city" id="city" />
+          </div>
+        </div>
+        <div class="container">
+          <div class="two_input">
+            <label for="code">Zip Code</label><br />
+            <input class="input" type="password" name="zipcode" id="code" />
+          </div>
+          <div class="two_input">
+            <label for="phone">E-mail</label><br />
+            <input class="input" type="tel" name="phonenum" id="phone" />
+          </div>
+        </div>
+        <div class="container">
+          <button type="submit" class="btn updt">Update</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
