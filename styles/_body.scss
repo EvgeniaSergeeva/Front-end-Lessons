@@ -1,0 +1,10 @@
+body{
+    background-color:$color-background;
+    @include flex-basic;
+}
+.main{
+    width: 1440px;
+    height: 1000px; 
+    background-color: $color-main;
+    @include flex-basic;
+}
