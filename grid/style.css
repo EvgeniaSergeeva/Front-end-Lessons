@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #e5e5e5;
+}
+.conteiner {
+  width: 1440px;
+  height: 5565px;
+  background: #ffffff;
+  padding-top: 80px;
+  display: grid;
+  grid-template-rows: 0.44fr 2.1fr 0.44fr 3fr 0.44fr 3.76fr 0.1fr;
+  justify-items: center;
+
+  align-items: center;
+}
+
+.gallery-name p,h1{
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 45px;
+  color: #000000;
+}
+.architect {
+  width: 82%;
+  height: 100%;
+  row-gap: 30px;
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  align-self: start;
+}
+.architect .architect__one {
+  border-radius: 20px;
+  grid-column-start: 1;
+  background-image: url("assets/item-1-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.architect .architect__two {
+  border-radius: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  background-image: url("assets/item-1-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.architect .architect__three {
+  border-radius: 20px;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  background-image: url("assets/item-1-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.architect .architect__four {
+  border-radius: 20px;
+  grid-column-start: 3;
+  background-image: url("assets/item-1-4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.architect .architect__five {
+  border-radius: 20px;
+  grid-column-start: 1;
+  grid-row-start: 3;
+  background-image: url("assets/item-1-5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.architect .architect__six {
+  border-radius: 20px;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row-start: 3;
+
+  background-image: url("assets/item-1-6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stil-life {
+  width: 82%;
+  height: 100%;
+  row-gap: 30px;
+  column-gap: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "one two two"
+    "three three four"
+    "three three four"
+    "five five six";
+  align-self: start;
+}
+.stil-life .stil-life__one {
+  border-radius: 20px;
+  grid-area: one;
+  background-image: url("assets/item-2-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stil-life .stil-life__two {
+  border-radius: 20px;
+  grid-area: two;
+  background-image: url("assets/item-2-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stil-life .stil-life__three {
+  border-radius: 20px;
+  grid-area: three;
+  background-image: url("assets/item-2-big.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stil-life .stil-life__four {
+  border-radius: 20px;
+  grid-area: four;
+  background-image: url("assets/item-2-portrait.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stil-life .stil-life__five {
+  border-radius: 20px;
+  grid-area: five;
+  background-image: url("assets/item-2-5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.stil-life .stil-life__six {
+  border-radius: 20px;
+  grid-area: six;
+  background-image: url("assets/item-2-6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.portrait-feshion {
+  width: 82%;
+  height: 100%;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 30px;
+  column-gap: 30px;
+  display: grid;
+  grid-template-areas:
+    "one two three"
+    "four two five"
+    "six seven five"
+    "six eight eight"
+    "nine nine ten";
+  align-self: start;
+}
+.portrait-feshion .portrait-feshion__one {
+  border-radius: 20px;
+  grid-area: one;
+  background-image: url("assets/item-3-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__two {
+  border-radius: 20px;
+  grid-area: two;
+  background-image: url("assets/item-3-2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__three {
+  border-radius: 20px;
+  grid-area: three;
+  background-image: url("assets/item-3-3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__four {
+  border-radius: 20px;
+  grid-area: four;
+  background-image: url("assets/item-3-4.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__five {
+  border-radius: 20px;
+  grid-area: five;
+  background-image: url("assets/item-3-5.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__six {
+  border-radius: 20px;
+  grid-area: six;
+  background-image: url("assets/item-3-6.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__seven {
+  border-radius: 20px;
+  grid-area: seven;
+  background-image: url("assets/item-3-7.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__eight {
+  border-radius: 20px;
+  grid-area: eight;
+  background-image: url("assets/item-3-8.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__nine {
+  border-radius: 20px;
+  grid-area: nine;
+  background-image: url("assets/item-3-9.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.portrait-feshion .portrait-feshion__ten {
+  border-radius: 20px;
+  grid-area: ten;
+  background-image: url("assets/item-3-10.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.colour-shift:hover {
+  filter: contrast(140%);
+  transition: 0.2s;
+  opacity: 1;
+  cursor: grab;
+}
+.heart {
+  width: 40px;
+  height: 40px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  float: left;
+  margin: 20px;
+  border: none;
+  opacity: 0;
+}
+.download {
+  width: 40px;
+  height: 40px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  float: right;
+  margin: 20px;
+  border: none;
+  opacity: 0;
+}
+.colour-shift:hover > button {
+  opacity: 1;
+}
