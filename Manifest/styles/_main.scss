@@ -1,0 +1,438 @@
+.main {
+    width: 100%;
+    display: grid;
+    row-gap: 70px;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "first"
+        "sec"
+        "third"
+        "fourth"
+        "fifth";
+
+    .first-screen {
+        grid-area: first;
+        height: 500px;
+        background-image: url(assets/bg-image.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        @media screen and (min-width: 768px) {
+            height: 320px;
+            background-position-y: bottom;
+        }
+        @media screen and (min-width: 1440px) {
+            height: 600px;
+        }
+        p {
+            font-family: $redHat;
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 50px;
+            color: $black;
+            display: block;
+            width: 70%;
+        }
+    }
+    .blog {
+        grid-area: sec;
+        display: grid;
+        row-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 64px 300px 250px 300px 250px;
+        grid-template-areas:
+            "header"
+            "txt1"
+            "ill1"
+            "txt2"
+            "ill2";
+
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $white;
+        @media screen and (min-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 64px 280px 280px;
+            column-gap: 20px;
+            grid-template-areas:
+                "header header"
+                "ill1 txt1"
+                "txt2 ill2";
+        }
+        @media screen and (min-width: 1440px) {
+            padding-left: 40px;
+            padding-right: 20px;
+            grid-template-rows: 64px 470px 470px;
+        }
+
+        .blog-header {
+            grid-area: header;
+            text-align: center;
+
+            font-family: $redHat;
+            font-size: 48px;
+            line-height: 64px;
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
+        }
+
+        .text p:nth-child(odd) {
+            font-family: $lato;
+            font-size: 16px;
+            line-height: 27px;
+            color: $grey;
+            @media screen and (min-width: 768px) {
+                line-height: 20px;
+            }
+            @media screen and (min-width: 1440px) {
+                line-height: 27px;
+            }
+        }
+        .text p:nth-child(2) {
+            font-family: $lato;
+            font-size: 22px;
+            line-height: 37px;
+            color: $black;
+            @media screen and (min-width: 768px) {
+                line-height: 28px;
+            }
+            @media screen and (min-width: 1440px) {
+                line-height: 37px;
+            }
+        }
+        .text p:nth-child(4) {
+            font-family: $lato;
+            font-size: 16px;
+            line-height: 27px;
+            color: $darkgrey;
+            @media screen and (min-width: 768px) {
+                line-height: 28px;
+            }
+            @media screen and (min-width: 1440px) {
+                line-height: 37px;
+            }
+        }
+
+        .text-one {
+            grid-area: txt1;
+            @media screen and (min-width: 1440px) {
+                margin-top: 30px;
+            }
+        }
+        .text-two {
+            grid-area: txt2;
+            @media screen and (min-width: 1440px) {
+                margin-top: 30px;
+            }
+        }
+        .illustration {
+            @include picture-prop;
+        }
+        .illustration1 {
+            background-image: url(assets/arrow.png);
+            grid-area: ill1;
+        }
+        .illustration2 {
+            background-image: url(assets/bg-image.png);
+            background-position-y: bottom;
+            grid-area: ill2;
+        }
+    }
+    .latest-posts {
+        grid-area: third;
+        display: grid;
+        row-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 40px 35px 210px 186px 210px 226px 210px 184px;
+        grid-template-areas:
+            "post-header"
+            "view-all"
+            "pic1"
+            "cont1"
+            "pic2"
+            "cont2"
+            "pic3"
+            "cont3";
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $white;
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40px 240px 240px 240px;
+            column-gap: 20px;
+            grid-template-areas:
+                "post-header view-all"
+                "pic1 cont1"
+                "cont2 pic2"
+                "pic3 cont3";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media screen and (min-width: 1440px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 40px 260px 190px;
+            column-gap: 20px;
+            grid-template-areas:
+                "post-header . view-all"
+                "pic1 pic2 pic3"
+                "cont1 cont2 cont3";
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        .latest-posts-header {
+            grid-area: post-header;
+            text-align: left;
+            font-family: $redHat;
+            font-size: 28px;
+            line-height: 30px;
+            font-weight: 600;
+        }
+        .view-all {
+            grid-area: view-all;
+            @include v-all;
+        }
+        .picture {
+            @include picture-prop;
+        }
+        .picture1 {
+            background-image: url(assets/lamp.png);
+            grid-area: pic1;
+        }
+        .picture2 {
+            background-image: url(assets/arrow.png);
+            grid-area: pic2;
+        }
+        .picture3 {
+            background-image: url(assets/roof.png);
+            grid-area: pic3;
+            background-position-y: bottom;
+        }
+        .post-content {
+            display: grid;
+            row-gap: 27px;
+            grid-template-columns: 1fr 1fr;
+
+            grid-template-areas:
+                "int date"
+                "traf traf";
+        }
+        .ux-traffic {
+            grid-area: cont1;
+            grid-template-rows: 27px 132px;
+        }
+        .interface {
+            @include interface-prop;
+        }
+        .date {
+            @include date-prop;
+        }
+        .posts-content {
+            grid-area: traf;
+            .first {
+                font-family: $redHat;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 36px;
+                color: $black;
+                @media screen and (min-width: 1440px) {
+                    width: 60%;
+                }
+            }
+            .second {
+                font-family: $lato;
+                font-size: 16px;
+                line-height: 27px;
+                color: $darkgrey;
+                @media screen and (min-width: 1440px) {
+                    width: 80%;
+                }
+            }
+        }
+        .ux-design {
+            grid-area: cont2;
+            grid-template-rows: 27px 174px;
+        }
+        .ux-creativity {
+            grid-area: cont3;
+            grid-template-rows: 27px 132px;
+        }
+    }
+    .most-popular {
+        grid-area: fourth;
+        display: grid;
+        row-gap: 40px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 36px 30px 150px 330px 150px 255px;
+        grid-template-areas:
+            "h"
+            "v"
+            "i1"
+            "t1"
+            "i2"
+            "t2";
+
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $white;
+        @media screen and (min-width: 768px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40px 160px 305px;
+            column-gap: 20px;
+            grid-template-areas:
+                "h v"
+                "i1 i2"
+                "t1 t2";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media screen and (min-width: 1440px) {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 40px 260px 216px;
+            column-gap: 20px;
+            grid-template-areas:
+                "h  v"
+                "i1 i2"
+                "t1 t2";
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .most-popular-header {
+            grid-area: h;
+            font-family: $redHat;
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 36px;
+            color: $black;
+        }
+        .view-all {
+            grid-area: v;
+            @include v-all;
+        }
+        .pict {
+            @include picture-prop;
+        }
+        .pict1 {
+            background-image: url(assets/orange.png);
+            grid-area: i1;
+        }
+        .pict2 {
+            background-image: url(assets/wall.png);
+
+            grid-area: i2;
+        }
+        .popular-content {
+            display: grid;
+            row-gap: 27px;
+            grid-template-columns: 1fr 1fr;
+
+            grid-template-areas:
+                "int date"
+                "traf traf";
+        }
+        .most-popular {
+            grid-area: t1;
+        }
+        .interface {
+            @include interface-prop;
+        }
+        .date {
+            @include date-prop;
+        }
+        .pop-content {
+            grid-area: traf;
+            .first {
+                font-family: $redHat;
+                font-size: 22px;
+                font-weight: 500;
+                line-height: 36px;
+                color: $black;
+                @media screen and (min-width: 1440px) {
+                    width: 60%;
+                }
+            }
+            .second {
+                font-family: $lato;
+                font-size: 16px;
+                line-height: 27px;
+                color: $darkgrey;
+                @media screen and (min-width: 1440px) {
+                    width: 80%;
+                }
+            }
+        }
+    }
+    .info {
+        grid-area: fifth;
+        display: grid;
+        row-gap: 20px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 160px 244px;
+        grid-template-areas:
+            "b"
+            "fir"
+            "sec";
+
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: $white;
+        @media screen and (min-width: 768px) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        @media screen and (min-width: 1440px) {
+            padding-left: 40px;
+            padding-right: 40px;
+            column-gap: 230px;
+            row-gap: 70px;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 50px 192px;
+            grid-template-areas:
+                "b b"
+                "fir sec";
+        }
+
+        .btn {
+            grid-area: b;
+        }
+        .btn button {
+            margin: 0 auto;
+            display: block;
+            width: 180px;
+            height: 46px;
+            background-color: $darkgrey;
+            color: $white;
+            border: none;
+        }
+        .info-head {
+            grid-area: fir;
+            width: 80%;
+            font-family: $redHat;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 40px;
+            color: $black;
+            margin-top: 20px;
+            @media screen and (min-width: 768px) {
+                width: 65%;
+            }
+        }
+        .info-content {
+            grid-area: sec;
+            width: 90%;
+            font-family: $lato;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 32px;
+            color: $darkgrey;
+            @media screen and (min-width: 768px) {
+                width: 100%;
+                text-align: right;
+            }
+        }
+    }
+}
