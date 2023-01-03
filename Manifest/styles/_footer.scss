@@ -1,0 +1,79 @@
+.footer {
+    width: 100%;
+    background-color: $lightgrey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 160px 120px 30px;
+    grid-template-areas:
+        "header"
+        "icon"
+        "copy";
+    @media screen and (min-width: 768px) {
+        grid-template-rows: 210px 120px 30px;
+    }
+    @media screen and (min-width: 1440px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 210px 30px;
+        grid-template-areas:
+            "header icon"
+            "copy copy";
+    }
+    .footer-head {
+        grid-area: header;
+        text-align: center;
+    }
+    .footer-head :nth-child(1) {
+        font-family: $redHat;
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 42px;
+        color: $black;
+        @media screen and (min-width: 768px) {
+            font-family: $redHat;
+            font-size: 48px;
+            line-height: 64px;
+        }
+    }
+    .footer-head :nth-child(2) {
+        font-family: $lato;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        color: $black;
+        @media screen and (min-width: 768px) {
+            font-family: $lato;
+            font-size: 16px;
+            line-height: 26px;
+        }
+    }
+    .icons {
+        grid-area: icon;
+
+        margin: 40px auto;
+        @media screen and (min-width: 1440px) {
+            margin-top: 80px;
+        }
+    }
+    .icon {
+        width: 50px;
+        height: 50px;
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .footer-copy {
+        grid-area: copy;
+        font-family: $lato;
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+        color: $black;
+        text-align: center;
+        @media screen and (min-width: 768px) {
+            font-size: 12px;
+            line-height: 20px;
+        }
+    }
+}
