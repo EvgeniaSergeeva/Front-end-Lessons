@@ -1,0 +1,102 @@
+.sidebar-menu {
+    @include flex(column);
+    width: 6%;
+    padding-top: 30px;
+    box-shadow: 5px 5px 5px $gray-light;
+    .logo {
+        width: 32px;
+        height: 32px;
+        align-self: center;
+        margin-bottom: 40px;
+    }
+    .arrow {
+        width: 20px;
+        height: 20px;
+        border-radius: 10px;
+        border: none;
+        background-color: $white;
+        position: absolute;
+        top: 40px;
+        left: 70px;
+    }
+
+    .sidebar-item {
+        display: inline-block;
+        position: relative;
+        width: 100%;
+    }
+    .badge {
+        position: absolute;
+        bottom: 15px;
+        left: 45px;
+    }
+
+    .sidebar-item_svg {
+        margin-left: 30px;
+    }
+    .sidebar-items {
+        @include flex(row);
+        width: 100%;
+        align-items: center;
+        margin-top: 10px;
+        height: 46px;
+    }
+    .sidebar-items:hover {
+        background-color: $purple-light;
+        cursor: pointer;
+    }
+
+    .sidenav-item_name {
+        display: none;
+        text-decoration: none;
+        @include item-text;
+    }
+    .sidenav-item_name.is-active {
+        display: inline-block;
+        width: 40%;
+    }
+    .divider {
+        margin-top: 20px;
+
+        .point-divider {
+            margin-left: 20px;
+        }
+        .point {
+            display: none;
+        }
+    }
+}
+.sidebar-menu.wide {
+    width: 320px;
+    .logo {
+        align-self: flex-start;
+        margin-left: 30px;
+    }
+    .arrow {
+        left: 250px;
+    }
+    .sidebar-item {
+        width: 30%;
+    }
+
+    .point {
+        display: block;
+        @include item-text;
+        text-transform: uppercase;
+        margin-left: 30px;
+    }
+    .point-divider {
+        display: none;
+    }
+    .open {
+        .point {
+            display: block;
+            @include item-text;
+            text-transform: uppercase;
+            margin-left: 30px;
+        }
+        .point-divider {
+            display: none;
+        }
+    }
+}
