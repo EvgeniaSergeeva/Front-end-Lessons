@@ -1,0 +1,48 @@
+.main {
+    @include flex(column);
+    width: 100%;
+}
+.top-menu {
+    width: 90%;
+    height: 80px;
+    background-color: $white;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px $gray-light;
+    margin-top: 20px;
+    margin-left: 80px;
+    @include flex(row);
+    justify-content: space-between;
+}
+
+.top-item :hover {
+    cursor: pointer;
+    filter: invert(62%) sepia(64%) saturate(2051%) hue-rotate(209deg) brightness(95%) contrast(109%);
+}
+.sidebar-item_svg2 {
+    border-radius: 20px;
+}
+.top-item2 :hover {
+    cursor: pointer;
+}
+.content {
+    width: 90%;
+    height: 900px;
+    margin-left: 40px;
+    margin-top: 80px;
+    background-image: url(assets/bg.png);
+}
+.left-submenu {
+    width: 25%;
+    margin-left: 30px;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+}
+.right-submenu {
+    width: 35%;
+    margin-right: 30px;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+}
