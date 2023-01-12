@@ -1,0 +1,37 @@
+@mixin flex($direction: column, $wrap: null) {
+    display: flex;
+    flex-direction: $direction;
+    
+   
+    @if $wrap {
+        flex-wrap: wrap;
+    } @else {
+        flex-wrap: nowrap;
+    }
+}
+
+@mixin subtitle {
+    padding: 20px 0;
+    font-family: $redHat;
+    font-size: 26px;
+    line-height: 44px;
+    font-weight: 600;
+    color: $black;
+    @media screen and (min-width: 768px) {
+        padding: 40px 0;
+        font-size: 28px;
+        line-height: 46px;
+    }
+}
+@mixin content-text {
+    font-family: $lato;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
+    color: $darkGrey;
+    padding: 20px 0;
+    @media screen and (min-width: 768px) {
+        font-size: 19px;
+        line-height: 32px;
+    }
+}
