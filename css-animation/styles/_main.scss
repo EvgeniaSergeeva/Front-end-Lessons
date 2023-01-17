@@ -1,0 +1,128 @@
+header {
+    width: 100%;
+    height: 120px;
+    position: fixed;
+
+    background-color: lightgray;
+    z-index: 10;
+    h1 {
+        font-size: 30px;
+        line-height: 60px;
+        text-transform: uppercase;
+        text-align: center;
+        animation: multicolor 3s linear infinite;
+    }
+}
+@keyframes multicolor {
+    0% {
+        color: blue;
+    }
+    25% {
+        color: red;
+    }
+    50% {
+        color: rgb(231, 89, 23);
+    }
+    75% {
+        color: purple;
+    }
+    100% {
+        color: blue;
+    }
+}
+.container {
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+
+    padding: 150px 30px;
+
+    background-color: lightgoldenrodyellow;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    column-gap: 30px;
+    row-gap: 30px;
+}
+.playing-card {
+    width: 288px;
+    height: 417px;
+    background-color: transparent;
+    perspective: 1000px;
+}
+.playing-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+.playing-card:hover .playing-card-inner {
+    transform: rotateY(180deg);
+}
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 100%;
+    width: 100%;
+    .center {
+        width: 60px;
+        position: absolute;
+        left: 40%;
+        top: 42%;
+    }
+    .red {
+        filter: invert(8%) sepia(98%) saturate(7110%) hue-rotate(4deg) brightness(99%) contrast(109%);
+    }
+    .suit {
+        width: 25px;
+        position: absolute;
+    }
+    .top-sign {
+        left: 7%;
+        top: 4%;
+    }
+    .top-sign-double {
+        left: 15%;
+        top: 4.5%;
+    }
+    .bottom-sign {
+        left: 85%;
+        top: 85%;
+        transform: rotate(180deg);
+    }
+    .bottom-sign-double {
+        left: 77%;
+        top: 85.5%;
+        transform: rotate(180deg);
+    }
+    .top-suit {
+        left: 7%;
+        top: 15%;
+    }
+    .top-suit-double {
+        left: 30px;
+        top: 65px;
+    }
+    .bottom-suit {
+        left: 84%;
+        top: 77%;
+        transform: rotate(180deg);
+    }
+    .bottom-suit-double {
+        left: 220px;
+        top: 320px;
+        transform: rotate(180deg);
+    }
+}
