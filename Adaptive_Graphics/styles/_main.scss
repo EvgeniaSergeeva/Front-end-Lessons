@@ -1,0 +1,109 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    background: $white;
+    @include flex(column);
+    row-gap: 40px;
+    @media screen and (min-width: 768px) {
+        row-gap: 50px;
+        padding: 20px 20px;
+    }
+    @media screen and (min-width: 1170px) {
+        row-gap: 60px;
+        padding: 20px 50px;
+    }
+}
+.header p {
+    font-family: $lato;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $black;
+}
+.header h1 {
+    font-family: $redHat;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 600;
+    color: $black;
+    @media screen and (min-width: 768px) {
+        font-size: 33px;
+        line-height: 50px;
+    }
+    @media screen and (min-width: 1170px) {
+        font-size: 48px;
+        line-height: 64px;
+    }
+}
+.narrow {
+    @media screen and (min-width: 1170px) {
+        width: 60%;
+    }
+}
+.first__screen {
+    background-image: url(assets/wall300.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 380px;
+    @media screen and (min-width: 768px) {
+        background-image: url(assets/wall700.png);
+        height: 380px;
+    }
+    @media screen and (min-width: 1170px) {
+        background-image: url(assets/wall1170.png);
+        height: 500px;
+    }
+}
+.second__screen {
+    background-image: url(assets/roof300.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    height: 380px;
+    @media screen and (min-width: 768px) {
+        background-image: url(assets/roof700.png);
+        height: 380px;
+    }
+    @media screen and (min-width: 1170px) {
+        background-image: url(assets/roof1170.png);
+        height: 500px;
+    }
+}
+.third__screen {
+    background-image: url(assets/sketches300.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    @media screen and (min-width: 768px) {
+        background-image: url(assets/sketches700.png);
+        height: 380px;
+    }
+    @media screen and (min-width: 1170px) {
+        background-image: url(assets/sketches1170.png);
+        height: 500px;
+    }
+}
+.fourth__screen {
+    background-image: url(assets/lamp300.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 380px;
+    @media screen and (min-width: 768px) {
+        background-image: url(assets/lamp700.png);
+        height: 380px;
+    }
+    @media screen and (min-width: 1170px) {
+        background-image: url(assets/lamp1170.png);
+        height: 500px;
+    }
+}
+.subtitle {
+    @include subtitle;
+}
+.content {
+    @include content-text;
+}
