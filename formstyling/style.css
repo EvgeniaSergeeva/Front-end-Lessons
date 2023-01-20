@@ -1,0 +1,241 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #e5e5e5;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #545454;
+}
+.forms {
+  width: 1440px;
+  height: 700px;
+
+  background: #f7f7f7;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  letter-spacing: -0.2px;
+  color: #545454;
+}
+
+.page {
+  width: 40%;
+  height: 84%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #1c1c1c;
+  width: 100%;
+  height: 50px;
+  margin-left: 5%;
+}
+p {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: -0.1px;
+  color: #969696;
+  width: 88%;
+}
+.container {
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.two_input {
+  width: 48%;
+  position: relative;
+}
+.one_input {
+  width: 100%;
+}
+.input {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #e4e4e4;
+  border-radius: 6px;
+}
+.input:focus {
+  border: 2px solid #bc3f3f;
+}
+.radio-container {
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.rad {
+  width: 25%;
+  position: relative;
+}
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  position: absolute;
+}
+input[type="radio"] + label {
+  display: flex;
+  position: relative;
+}
+
+input[type="radio"] + label:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e4e4e4;
+  display: inline-block;
+  border-radius: 50%;
+  margin-inline-end: 10px;
+}
+
+input[type="radio"] + label:after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid white;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+}
+input[type="radio"]:checked + label:before {
+  background: #007bff;
+}
+input[type="radio"]:checked + label:after {
+  background: white;
+}
+.select_country {
+  width: 48%;
+}
+
+.select {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: -0.2px;
+  color: #545454;
+  position: relative;
+  display: inline-block;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: transparent;
+  background-image: url("assets/Arrow\ .svg");
+  background-repeat: no-repeat;
+  background-position-x: 100%;
+  background-position-y: 9px;
+}
+.btn {
+  width: 100%;
+  background-color: #007bff;
+  border-radius: 6px;
+  border: 1px solid #e4e4e4;
+  color: white;
+  padding: 0px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.9;
+}
+.btn:hover {
+  opacity: 1;
+}
+span {
+  color: #007bff;
+}
+.info {
+  width: 75%;
+}
+.info p {
+  text-align: center;
+}
+.container img {
+  height: 1px;
+}
+.log {
+  width: 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.log_in:hover {
+  color: lightskyblue;
+}
+.updt {
+  width: 30%;
+  height: 32px;
+}
+.prof {
+  padding-bottom: 90px;
+}
+.photo-container {
+  width: 88%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: start;
+  justify-self: start;
+}
+.photo-icon {
+  margin-left: 30px;
+  width: 32%;
+}
+.upload {
+  display: flex;
+  flex-direction: column;
+}
+.upload input {
+  height: 30px;
+  position: relative;
+  display: inline-block;
+  background: transparent;
+  background-image: url("assets/photo.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: 9px;
+  cursor: pointer;
+}
+.photo-icon .info {
+  width: 100%;
+}
+.photo-container .d-btn {
+  margin-left: 20px;
+  width: 10%;
+}
+.del-btn {
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+  cursor: pointer;
+
+  border-radius: 6px;
+}
