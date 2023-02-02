@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>JS Basis</title>
+  </head>
+  <body>
+    <header>
+      <img
+        class="header-logo"
+        src="assets/Unofficial_JavaScript_logo_2.svg.png"
+        alt="logo of JS"
+      />
+      <h1>JavaScript — Dynamic client-side scripting</h1>
+    </header>
+    <div class="container">
+      <p class="info">
+        Javascript is a programming language that allows us to implement complex
+        functionalities on web pages.
+      </p>
+      <p class="info">
+        JavaScript is a scripting language that enables us to create dynamically
+        updating content, control multimedia, animate images.
+      </p>
+      <p class="info">
+        The core client-side JavaScript language consists of some common
+        programming features that allow you to do things like:
+      </p>
+      <ul>
+        <li>
+          Store useful values inside variables. In the above example for
+          instance, we ask for a new name to be entered then store that name in
+          a variable called <span>name</span>.
+        </li>
+        <li>
+          Operations on pieces of text (known as "strings" in programming).
+        </li>
+        <li>
+          Running code in response to certain events occurring on a web page. We
+          used a <span>click</span> event in our example above to detect when
+          the label is clicked and then run the code that updates the text
+          label.
+        </li>
+      </ul>
+      <h2>Comments in JS</h2>
+      <p class="info">
+        JavaScript comments can be used to explain JavaScript code, and to make
+        it more readable. JavaScript comments can also be used to prevent
+        execution, when testing alternative code.
+      </p>
+      <p class="info">
+        Single line comments start with //. Any text between // and the end of
+        the line will be ignored by JavaScript (will not be executed).
+      </p>
+      <p class="info">
+        Multi-line comments start with /* and end with */. Any text between /*
+        and */ will be ignored by JavaScript.
+      </p>
+      <h2>Variables in JS</h2>
+      <p class="info">
+        Variables are containers for storing data (storing data values).
+      </p>
+      <p class="info">
+        We declare JavaScript variables with <span>var</span>,<span>let</span>,
+        or <span>const</span>. The <span>var</span> keyword is used in all
+        JavaScript code from 1995 to 2015. The <span>let</span> and
+        <span>const</span> keywords were added to JavaScript in 2015. If we want
+        our code to run in older browsers, we must use <span>var</span>.
+      </p>
+      <p class="info">
+        If we need a general rule: always declare variables with
+        <span>const</span>. If the value of the variable can change, use
+        <span>let</span>.
+      </p>
+      <h2>JavaScript Identifiers</h2>
+      <p class="info">
+        All JavaScript variables must be identified with unique names. These
+        unique names are called identifiers. Identifiers can be short names
+        (like x and y) or more descriptive names (age, sum, totalVolume). The
+        general rules for constructing names for variables (unique identifiers)
+        are:
+      </p>
+      <ul>
+        <li>
+          Names can contain letters, digits, underscores, and dollar signs.
+        </li>
+        <li>
+          Operations on pieces of text (known as "strings" in programming).
+        </li>
+        <li>Names must begin with a letter.</li>
+        <li>Names can also begin with $ and _ .</li>
+        <li>Names are case sensitive (y and Y are different variables).</li>
+        <li>
+          Reserved words (like JavaScript keywords) cannot be used as names.
+        </li>
+      </ul>
+      <h2>Examples</h2>
+      <p class="info">
+        let firstName = Evgenia;<br />
+        let lastName = Sergeeva;<br />
+        let age = 44;<br />
+        let city = "Kharkiv";<br />
+        let _course = 'Front-end';<br />
+        let $dateOfBeginning = '09/11/2022'<br />
+      </p>
+      <p class="info">
+        let 44 = 44 // names of variables cannot start with number<br />
+        let function = f (x) // reserved words cannot act as names<br />
+        let const = 55 // reserved words cannot act as names<br />
+        let 1 = 1 // names of variables cannot start with number<br />
+      </p>
+    </div>
+    <script defer src="index.js"></script>
+  </body>
+</html>
