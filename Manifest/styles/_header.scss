@@ -1,0 +1,74 @@
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: $white;
+    @include flex(row);
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    @media screen and (min-width: 768px) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @media screen and (min-width: 1440px) {
+        height: 100px;
+    }
+    .logo {
+        width: 145px;
+    }
+    .main-menu {
+        width: 90%;
+        @include flex(row);
+        justify-content: flex-end;
+        ul {
+            width: 60%;
+            @include flex(row);
+            justify-content: space-between;
+            list-style-type: none;
+
+            overflow: hidden;
+            li a {
+                display: inline-block;
+                color: $black;
+                font-family: $lato;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            li a:hover {
+                opacity: 0.6;
+            }
+        }
+        .default {
+            text-decoration: underline;
+        }
+        @media screen and (max-width: 1440px) {
+            display: none;
+        }
+    }
+    .right-menu {
+        @include flex(row);
+        justify-content: flex-end;
+        @media screen and (min-width: 768px) {
+            width: 33%;
+        }
+        .search {
+            width: 20px;
+            height: 20px;
+            margin-right: 20px;
+        }
+        .search:hover {
+            opacity: 0.6;
+        }
+        .hamburger {
+            width: 34px;
+            height: 20px;
+            @media screen and (min-width: 1440px) {
+                display: none;
+            }
+        }
+        .hamburger:hover {
+            opacity: 0.6;
+        }
+    }
+}
