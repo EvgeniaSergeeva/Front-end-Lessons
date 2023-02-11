@@ -8,10 +8,10 @@ const test = function () {
 const add = (a, b) => a + b; //arrow function
 
 //Створи функцію, яка буде виводити кількість переданих їй аргументів.
-function myLength(a) {
-  console.log(myLength.arguments.length);
+function myLength() {
+  console.log(arguments.length);
 }
-myLength(1, 2, 3); //3
+myLength(1, 2, 3, 5); //4
 
 //Напиши функцію, яка приймає 2 числа і повертає :
 //-1, якщо перше число менше, ніж друге;
@@ -42,9 +42,11 @@ function myFactorial(n) {
     console.log("Please provide proper number input!");
   } else {
     let result = 1;
-    if (n < 0) result = undefined;
-    else if (n === 0) result = 1;
-    else {
+    if (n < 0) {
+      result = undefined;
+    } else if (n === 0) {
+      result = 1;
+    } else {
       for (let i = 1; i <= n; i++) {
         result *= i;
       }
