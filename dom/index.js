@@ -95,3 +95,69 @@ for (let i = 0; i < anim.length; i++) {
     anim[i].style.textAlign = "left";
   }
 }
+
+// calculate the average price of products in each category,
+
+const products = [
+  { name: "Product 1", price: 20, category: "Electronics" },
+  { name: "Product 2", price: 30, category: "Clothes" },
+  { name: "Product 3", price: 40, category: "Electronics" },
+  { name: "Product 4", price: 50, category: "Clothes" },
+  { name: "Product 5", price: 60, category: "Clothes" },
+  { name: "Product 6", price: 70, category: "Electronics" },
+  { name: "Product 7", price: 80, category: "Clothes" },
+  { name: "Product 8", price: 90, category: "Electronics" },
+];
+
+const divideIntoCategories = products.reduce((obj, product) => {
+  if (!obj[product.category]) {
+    obj[product.category] = [];
+  }
+  obj[product.category].push(product);
+  return obj;
+}, {});
+
+const arrOfCategories = Object.keys(divideIntoCategories);
+console.log(arrOfCategories);
+
+arrOfCategories.forEach((item) => {
+  console.log(
+    divideIntoCategories[item].reduce(
+      (total, amount) => total + amount.price,
+      0
+    ) / divideIntoCategories[item].length
+  );
+});
+
+//create a form with submit
+//when I click submit i could see either in alert or console all data that
+// user has inserted
+
+const form = document.getElementById("form");
+
+const formInfo = (e) => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  let text = "";
+  const firstName = formData.get("first-name");
+  firstName !== ""
+    ? (text += `First name is: ${firstName}` + "\n")
+    : (text += `Enter your first name, please!` + "\n");
+  const lastName = formData.get("last-name");
+  lastName !== ""
+    ? (text += `Last name is: ${lastName}` + "\n")
+    : (text += `Enter your last name, please!` + "\n");
+  const email = formData.get("email");
+  email !== ""
+    ? (text += `Email is: ${email}` + "\n")
+    : (text += `Enter your email, please!` + "\n");
+
+  const password = formData.get("password");
+  password !== ""
+    ? (text += `Password is: ${password}` + "\n")
+    : (text += `Enter the password, please!` + "\n");
+
+  alert(text);
+};
+
+form.addEventListener("submit", formInfo);
