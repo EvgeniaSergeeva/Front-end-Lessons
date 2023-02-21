@@ -1,0 +1,281 @@
+.header-swiper {
+    width: 100%;
+    position: relative;
+    background-color: $white;
+    height: 700px;
+    @media screen and (max-width: 768px) {
+        height: 380px;
+    }
+    @media screen and (max-width: 400px) {
+        height: 384px;
+    }
+}
+.header-swiper-first-slide {
+    background-image: url(assets/picture1.png);
+    @include bg-image;
+}
+.header-swiper-second-slide {
+    background-image: url(assets/picture2.png);
+    @include bg-image;
+}
+.header-swiper-third-slide {
+    background-image: url(assets/picture3.png);
+    @include bg-image;
+}
+h1 {
+    width: 350px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-family: $montserrat;
+    font-size: 50px;
+    font-weight: 700;
+    text-align: center;
+    color: $brown-light;
+    @media screen and (max-width: 768px) {
+        width: 210px;
+        top: 25%;
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 32px;
+    }
+}
+.view-more {
+    width: 227px;
+    height: 52px;
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    text-transform: uppercase;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $white;
+    border: 2px solid $white;
+    background-color: transparent;
+    @media screen and (max-width: 768px) {
+        width: 154px;
+        height: 40px;
+    }
+}
+.view-more:hover {
+    background-color: $tomato-light;
+    border: 2px solid $tomato-light;
+    cursor: pointer;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet {
+    background: $dark-dot-inactive;
+    width: 12px;
+    height: 12px;
+    z-index: 10;
+}
+span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: $tomato-light;
+    width: 12px;
+    height: 12px;
+    z-index: 10;
+}
+.new-arrivals-section {
+    width: 100%;
+    background-color: $white;
+    @include flex;
+}
+.guitar-wrapper {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+h2 {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: $montserrat;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+}
+.new-guitars {
+    width: 80vw;
+    margin: 0 auto;
+    margin-left: 3%;
+}
+
+.guitar-border {
+    width: 225px;
+    @media screen and (max-width: 400px) {
+        width: 290px;
+        margin-left: 5%;
+    }
+}
+.guitar-border:hover {
+    border: 2px solid $tomato-light;
+}
+.guitar img {
+    @media screen and (max-width: 400px) {
+        height: 370px;
+    }
+}
+.in-stock {
+    @include product-status($tomato-light, $brown-light);
+}
+.sold {
+    @include product-status($brown-light, $black);
+}
+.product-description {
+    width: 200px;
+    bottom: 50px;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-align: center;
+    color: $black;
+    @media screen and (max-width: 400px) {
+        width: 80%;
+    }
+}
+.product-price {
+    width: 200px;
+    bottom: 20px;
+    font-family: $montserrat;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    text-align: center;
+    color: $black;
+    @media screen and (max-width: 400px) {
+        width: 80%;
+    }
+}
+.guitars-pagination {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 97%;
+    @media screen and (min-width: 650px) {
+        display: none;
+    }
+}
+#prev-btn,
+#next-btn {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    z-index: 10;
+    @media screen and (max-width: 650px) {
+        display: none;
+    }
+}
+#prev-btn img,
+#next-btn img {
+    @media screen and (max-width: 768px) {
+        width: 24px;
+        height: 40px;
+    }
+}
+#prev-btn:hover,
+#next-btn:hover {
+    filter: brightness(0) saturate(100%) invert(18%) sepia(79%) saturate(3013%) hue-rotate(0deg) brightness(98%)
+        contrast(106%);
+}
+.guitars-prev-btn {
+    top: 40%;
+    left: 1%;
+}
+.guitars-next-btn {
+    top: 40%;
+    right: 0;
+}
+
+.new-arrivals-btn {
+    width: 227px;
+    height: 52px;
+    margin: 60px auto;
+    text-transform: uppercase;
+    font-family: $montserrat;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: $black;
+    border: 2px solid $black;
+    background-color: transparent;
+    @media screen and (max-width: 768px) {
+        width: 154px;
+        height: 40px;
+    }
+}
+.new-arrivals-btn:hover {
+    background-color: $tomato-light;
+    border: 2px solid $tomato-light;
+    cursor: pointer;
+}
+
+.our-partners {
+    width: 100%;
+    height: 370px;
+    position: relative;
+    background-color: $brown-light;
+    @include flex;
+    row-gap: 40px;
+    padding: 70px 0;
+    @media screen and (max-width: 400px) {
+        padding: 70px 0;
+    }
+}
+.our-partners h2 {
+    margin-bottom: 30px;
+}
+.partners-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.partners-wrapper .partners-logos {
+    //width: 80vw;
+    //margin: 0 auto;
+    //margin-left: 2%;
+    @include flex(row);
+    width: 90%;
+    height: 70px;
+    //margin: 0 auto;
+    column-gap: 1%;
+    @media screen and (max-width: 768px) {
+        width: 90%;
+        height: 65px;
+    }
+}
+.partner-logo {
+    width: 10%;
+}
+
+.partners-pagination {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    position: absolute;
+    top: 85%;
+    @media screen and (min-width: 650px) {
+        display: none;
+    }
+}
+.partners-prev-btn {
+    position: absolute;
+    bottom: 26%;
+    left: 1%;
+}
+.partners-next-btn {
+    position: absolute;
+    bottom: 26%;
+    right: 1%;
+    z-index: 10;
+}

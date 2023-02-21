@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OnWave</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <div class="navigation">
+          <img src="assets/logo-red.svg" alt="picture of logo" />
+          <div class="nav-menu">
+            <a class="menu-item" href="#">Home</a>
+            <a class="menu-item" href="#new-arrivals">Catalog</a>
+            <a class="menu-item" href="#partners">News</a>
+            <a class="menu-item" href="#footer">Contacts</a>
+          </div>
+          <div class="search-profile">
+            <img src="assets/search-icon.svg" alt="search" />
+            <img src="assets/profile-icon.svg" alt="profile" />
+          </div>
+        </div>
+        <div class="hamburger-menu">
+          <ul class="menu-box">
+            <li><a class="menu-item box-item" href="#">Home</a></li>
+            <li>
+              <a class="menu-item box-item" href="#new-arrivals">Catalog</a>
+            </li>
+            <li><a class="menu-item box-item" href="#partners">News</a></li>
+            <li><a class="menu-item box-item" href="#footer">Contacts</a></li>
+          </ul>
+          <button class="hamburger">
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <div class="header-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide header-swiper-first-slide">
+          <h1>Find your own style</h1>
+          <button class="view-more">View more</button>
+        </div>
+        <div class="swiper-slide header-swiper-second-slide">
+          <h1>Find your own style</h1>
+          <button class="view-more">View more</button>
+        </div>
+        <div class="swiper-slide header-swiper-third-slide">
+          <h1>Find your own style</h1>
+          <button class="view-more">View more</button>
+        </div>
+      </div>
+      <div class="swiper-pagination header-pagination"></div>
+    </div>
+
+    <div class="new-arrivals-section">
+      <h2 id="new-arrivals" class="new-arrivals">new arrivals</h2>
+
+      <div class="guitar-wrapper">
+        <div class="swiper-wrapper new-guitars">
+          <div class="swiper-slide guitar">
+            <div class="guitar-border">
+              <div class="in-stock">in stock</div>
+              <img src="assets/guitar1.png" alt="pictuer of a guitar" />
+              <p class="product-description">Hagstrom Alvar Limited Edition</p>
+              <p class="product-price">€2.990,00</p>
+            </div>
+          </div>
+          <div class="swiper-slide guitar">
+            <div class="guitar-border">
+              <div class="in-stock">in stock</div>
+              <img src="assets/guitar2.png" alt="pictuer of a guitar" />
+              <p class="product-description">
+                Hagstrom Tremar Viking Deluxe Cloudy Seas
+              </p>
+              <p class="product-price">€1.300,00</p>
+            </div>
+          </div>
+          <div class="swiper-slide guitar">
+            <div class="guitar-border">
+              <div class="sold">Sold</div>
+              <img src="assets/guitar3.png" alt="pictuer of a guitar" />
+              <p class="product-description">Gibson Les Paul Standard 60s</p>
+              <p class="product-price">€3.749,00</p>
+            </div>
+          </div>
+          <div class="swiper-slide guitar">
+            <div class="guitar-border">
+              <div class="in-stock">in stock</div>
+              <img src="assets/guitar4.png" alt="pictuer of a guitar" />
+              <p class="product-description">
+                Suhr Standard Plus Trans Blue Denim
+              </p>
+              <p class="product-price">€3.449,00</p>
+            </div>
+          </div>
+          <div class="swiper-slide guitar">
+            <div class="guitar-border">
+              <div class="in-stock">in stock</div>
+              <img src="assets/guitar5.png" alt="pictuer of a guitar" />
+              <p class="product-description">
+                Fender Telecaster Black Paisley Limited Edition
+              </p>
+              <p class="product-price">€1.499,00</p>
+            </div>
+          </div>
+          <div class="swiper-slide guitar">
+            <div class="guitar-border">
+              <div class="in-stock">in stock</div>
+              <img src="assets/guitar2.png" alt="pictuer of a guitar" />
+              <p class="product-description">
+                Hagstrom Tremar Viking Deluxe Cloudy Seas
+              </p>
+              <p class="product-price">€1.300,00</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-pagination guitars-pagination"></div>
+        <button id="prev-btn" class="guitars-prev-btn">
+          <img src="assets/prev-big.svg" />
+        </button>
+        <button id="next-btn" class="guitars-next-btn">
+          <img src="assets/next-big.svg" />
+        </button>
+      </div>
+
+      <button class="new-arrivals-btn">View more</button>
+    </div>
+
+    <div class="our-partners">
+      <h2 id="partners">our partners</h2>
+      <div class="partners-wrapper">
+        <div class="swiper-wrapper partners-logos">
+          <div class="swiper-slide partner-logo">
+            <img src="assets/epyphone.svg" alt="logo of Epyphone" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/esp.svg" alt="logo of ESP" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/gibson.svg" alt="logo of Gibson" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/engl.svg" alt="logo of ENGL" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/roland.svg" alt="logo of Roland" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/fender.svg" alt="logo of Fender" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/peavey.svg" alt="logo of Peavey" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/marshal.svg" alt="logo of Marshal" />
+          </div>
+          <div class="swiper-slide partner-logo">
+            <img src="assets/orange.svg" alt="logo of Orange" />
+          </div>
+        </div>
+        <div class="swiper-pagination partners-pagination"></div>
+        <button id="prev-btn" class="partners-prev-btn">
+          <img src="assets/prev-big.svg" />
+        </button>
+        <button id="next-btn" class="partners-next-btn">
+          <img src="assets/next-big.svg" />
+        </button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-logo">
+        <img src="assets/logo-light.svg" alt="Picture of logo" />
+      </div>
+      <p class="contact-us" id="footer">Contact Us</p>
+      <div class="footer-menu" id="footer-contacts">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#new-guitars">Catalog</a></li>
+          <li><a href="#our-partners">News</a></li>
+          <li><a href="#footer-contacts">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="social-icons">
+        <img src="assets/insta.svg" alt="instagram" />
+        <img src="assets/fb.svg" alt="facebook" />
+        <img src="assets/pinterest.svg" alt="pinterest" />
+        <img src="assets/twitter.svg" alt="twitter" />
+        <img src="assets/youtube.svg" alt="youtube" />
+        <p class="contact-us">0800 300 4040</p>
+      </div>
+      <p class="copyright">© Copyright 2022. All rights reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+  </body>
+</html>
