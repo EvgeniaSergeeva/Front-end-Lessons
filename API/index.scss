@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+img {
+    width: 100%;
+    display: block;
+}
+.wrapper {
+    width: 100%;
+}
+.search-form {
+    height: 200px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.search-movie {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.search-movie h2 {
+    text-align: center;
+    background-color: aqua;
+}
+#button-search {
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+}
+.search-movie .form-input {
+    width: 400px;
+    margin: 0 auto;
+    font-size: 20px;
+    padding: 14px 20px;
+    border-radius: 10px;
+    border: 2px solid darkblue;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+.movie-list {
+    width: 100%;
+    max-height: 350px;
+    overflow-y: scroll;
+    display: none;
+}
+.movie-list .movie-list-item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: azure;
+    padding: 10px;
+    border: 1px solid darkblue;
+}
+.movie-list .movie-list-item:hover {
+    background-color: aquamarine;
+}
+.movie-list-item-small-poster {
+    width: 10%;
+}
+.movie-list-item-small-poster img {
+    width: 30px;
+    margin: 0 10px;
+}
+.movie-item-info {
+    width: 70%;
+}
+.movie-item-info h3 {
+    font-size: 20px;
+}
+.movie-item-info p {
+    font-size: 20px;
+}
+.details {
+    align-self: flex-end;
+    width: 70px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+}
+.details:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.result-content {
+    width: 90%;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+}
+
+.movie-poster-big {
+    max-width: 250px;
+    margin: 0 auto;
+}
+.movie-info {
+    text-align: start;
+    margin-left: 50px;
+}
+.movie-title {
+    font-size: 24px;
+    text-align: start;
+}
+.movie-info p {
+    width: 100%;
+}
