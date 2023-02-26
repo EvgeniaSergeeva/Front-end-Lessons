@@ -87,8 +87,7 @@ img {
 
 .movie-list {
   width: 100%;
-  max-height: 350px;
-  overflow-y: scroll;
+  height: 800px;
   display: none;
 }
 
@@ -189,4 +188,14 @@ img {
 
 .movie-info p {
   width: 100%;
+}
+
+.next-button {
+  margin-top: 20px;
+  width: 100px;
+  height: 35px;
+  background-color: blue;
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
 }
