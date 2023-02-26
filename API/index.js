@@ -71,25 +71,22 @@ const showListLong = (items) => {
     movieList.append(nextButton);
   }
 };
-
+let pageNum = 1;
 document.addEventListener("click", function (e) {
   if (e.target.classList.contains("next-button")) {
     movieList.innerHTML = "";
-    let pageNum;
+    pageNum++;
 
-    for (let i = 2; i <= Math.ceil(numberOfResults / 10) + 1; i++) {
-      pageNum = i;
-      const _endpointIfMoreThenOnePage = ` http://www.omdbapi.com/?apikey=75f033ce&s=${movieToFind}&page=${pageNum}`;
-      fetch(_endpointIfMoreThenOnePage)
-        .then((response) => {
-          const res = response.json();
-          return res;
-        })
-        .then((res) => {
-          console.log(res);
-          showListLong(res);
-        });
-    }
+    const _endpointIfMoreThenOnePage = ` http://www.omdbapi.com/?apikey=75f033ce&s=${movieToFind}&page=${pageNum}`;
+    fetch(_endpointIfMoreThenOnePage)
+      .then((response) => {
+        const res = response.json();
+        return res;
+      })
+      .then((res) => {
+        console.log(res);
+        showListLong(res);
+      });
   }
 });
 
